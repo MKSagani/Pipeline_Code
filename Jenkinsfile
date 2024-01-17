@@ -22,7 +22,7 @@ pipeline {
         }
         stage("Deploy on Test"){
            steps {
-            deploy adapters: [tomcat9(credentialsId: 'tomcat9details', path: '', url: 'http://51.21.130.245:8080/')], contextPath: '/app', war: '**/*.war'
+           deploy adapters: [tomcat9(credentialsId: 'tomcat9details', path: '', url: 'http://51.21.130.163:8080/')], contextPath: '/app', war: '**/*.war'
         }
             
         }
@@ -34,7 +34,8 @@ pipeline {
             
                 // deploy on container -> plugin
                steps {
-            deploy adapters: [tomcat9(credentialsId: 'tomcat9details', path: '', url: 'http://16.171.237.185:8080/')], contextPath: '/app', war: '**/*.war'
+             deploy adapters: [tomcat9(credentialsId: 'tomcat9details', path: '', url: 'http://13.51.69.21:8080/')], contextPath: '/app', war: '**/*.war'
+
         }
 
         }
